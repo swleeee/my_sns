@@ -36,3 +36,33 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  z-index: 0;
+}
+body::after {
+  content: "";
+  background-image: url(img/login__main2.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  /* opacity: 0.7; */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  filter: blur(2px);
+}
+
+.loginForm {
+  z-index: 2;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
